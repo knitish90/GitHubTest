@@ -11,13 +11,27 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var coordinator : LoginViewCoordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        if let windowScene = scene as? UIWindowScene {
+            let navController = UINavigationController()
+            navController.navigationBar.tintColor   =   Constants.Colors.headerColor
+            let window = UIWindow(windowScene: windowScene)
+            // send that into our coordinator so that it can display view controllers
+            coordinator = LoginViewCoordinator(navigationController: navController)
+
+            // tell the coordinator to take over control
+            coordinator.start()
+            
+            window.rootViewController = navController
+            self.window =   window
+            window.makeKeyAndVisible()
+        }
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,7 +64,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
 
