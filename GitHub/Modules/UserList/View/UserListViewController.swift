@@ -99,6 +99,7 @@ extension UserListViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         viewModel.isSearchEnabled = true
         guard let searchText = searchBar.text, !searchText.isEmpty else {
+            resetSearchSettings()
             return
         }
         

@@ -108,6 +108,7 @@
         <!--Navigation Controller-->
         <scene sceneID="xgS-bN-fy9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pwG-mA-03m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xMc-44-OP3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5CO-r1-jea">
@@ -119,7 +120,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ukh-W6-aKu"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pwG-mA-03m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
@@ -518,65 +518,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4W-EB-reC">
-                                <rect key="frame" x="60" y="353" width="294" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-TU-d6e">
-                                        <rect key="frame" x="0.0" y="31" width="294" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="d8h-eC-mLH"/>
-                                        </constraints>
-                                        <state key="normal" image="gh-login-button">
-                                            <color key="titleColor" red="0.86274509799999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="corner_Radius">
-                                                <real key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="loginWithGitHub:" destination="HnA-MR-7ci" eventType="touchUpInside" id="Kya-sp-wpj"/>
-                                            <action selector="proceedAsGuest:" destination="HnA-MR-7ci" eventType="touchUpInside" id="LhC-W0-SNd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PbK-aN-Gsq">
-                                        <rect key="frame" x="0.0" y="116" width="294" height="50"/>
-                                        <color key="backgroundColor" red="0.58823529411764708" green="0.78431372549019607" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="20I-w4-iBv"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="20"/>
-                                        <state key="normal" title="Proceed as Guest?">
-                                            <color key="titleColor" red="0.86274509799999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="corner_Radius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="proceedAsGuest:" destination="HnA-MR-7ci" eventType="touchUpInside" id="6g6-EH-QQv"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig9-TU-d6e">
+                                <rect key="frame" x="60" y="425.5" width="294" height="55"/>
                                 <constraints>
-                                    <constraint firstItem="PbK-aN-Gsq" firstAttribute="leading" secondItem="U4W-EB-reC" secondAttribute="leading" id="3Y4-dg-r9x"/>
-                                    <constraint firstItem="PbK-aN-Gsq" firstAttribute="top" secondItem="ig9-TU-d6e" secondAttribute="bottom" constant="30" id="827-a5-9HH"/>
-                                    <constraint firstAttribute="bottom" secondItem="PbK-aN-Gsq" secondAttribute="bottom" constant="34" id="EXP-nz-ZnA"/>
-                                    <constraint firstAttribute="trailing" secondItem="ig9-TU-d6e" secondAttribute="trailing" id="Gx0-b0-oOz"/>
-                                    <constraint firstAttribute="height" constant="200" id="JVW-ev-NHN"/>
-                                    <constraint firstItem="ig9-TU-d6e" firstAttribute="leading" secondItem="U4W-EB-reC" secondAttribute="leading" id="Lcv-JI-69M"/>
-                                    <constraint firstAttribute="trailing" secondItem="PbK-aN-Gsq" secondAttribute="trailing" id="Tk8-Xx-m5K"/>
-                                    <constraint firstItem="ig9-TU-d6e" firstAttribute="top" secondItem="U4W-EB-reC" secondAttribute="top" constant="31" id="Um0-3u-0vL"/>
+                                    <constraint firstAttribute="height" constant="55" id="d8h-eC-mLH"/>
                                 </constraints>
-                            </view>
+                                <state key="normal" image="gh-login-button">
+                                    <color key="titleColor" red="0.86274509799999999" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="corner_Radius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginWithGitHub:" destination="HnA-MR-7ci" eventType="touchUpInside" id="Kya-sp-wpj"/>
+                                    <action selector="proceedAsGuest:" destination="HnA-MR-7ci" eventType="touchUpInside" id="LhC-W0-SNd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59215686274509804" green="0.31764705882352939" blue="0.32156862745098036" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="jgy-i9-DnF" firstAttribute="trailing" secondItem="U4W-EB-reC" secondAttribute="trailing" constant="60" id="3MV-Vt-7kA"/>
-                            <constraint firstItem="U4W-EB-reC" firstAttribute="centerY" secondItem="jgy-i9-DnF" secondAttribute="centerY" id="O4d-Bx-8dz"/>
-                            <constraint firstItem="U4W-EB-reC" firstAttribute="centerX" secondItem="jgy-i9-DnF" secondAttribute="centerX" id="nF1-c1-UKg"/>
-                            <constraint firstItem="U4W-EB-reC" firstAttribute="leading" secondItem="jgy-i9-DnF" secondAttribute="leading" constant="60" id="vbY-6W-Xs1"/>
+                            <constraint firstItem="ig9-TU-d6e" firstAttribute="centerY" secondItem="jgy-i9-DnF" secondAttribute="centerY" id="CP2-NW-2Sa"/>
+                            <constraint firstItem="ig9-TU-d6e" firstAttribute="centerX" secondItem="jgy-i9-DnF" secondAttribute="centerX" id="HaS-5K-teJ"/>
+                            <constraint firstItem="ig9-TU-d6e" firstAttribute="leading" secondItem="V6t-PQ-CSY" secondAttribute="leading" constant="60" id="kDT-7g-V3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="ig9-TU-d6e" secondAttribute="trailing" constant="60" id="r4K-fb-ntR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jgy-i9-DnF"/>
                     </view>
@@ -605,7 +571,7 @@
                                 <rect key="frame" x="5" y="64" width="95" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="UH0-Ua-TeJ"/>
-                                    <constraint firstAttribute="width" constant="95" id="w45-rp-y1b"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="w45-rp-y1b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <state key="normal" title="Cancel">
@@ -632,8 +598,9 @@
                             <constraint firstItem="Pke-GA-4oE" firstAttribute="bottom" secondItem="WYZ-CK-ufz" secondAttribute="bottom" id="B6H-LT-AH5"/>
                             <constraint firstItem="WYZ-CK-ufz" firstAttribute="leading" secondItem="aTo-B2-TOK" secondAttribute="leading" id="FQ3-7J-m2A"/>
                             <constraint firstItem="WYZ-CK-ufz" firstAttribute="top" secondItem="Pke-GA-4oE" secondAttribute="top" id="N8K-RW-ExR"/>
-                            <constraint firstItem="At9-hB-fky" firstAttribute="leading" secondItem="Pke-GA-4oE" secondAttribute="leading" constant="5" id="RKx-Up-13X"/>
+                            <constraint firstItem="At9-hB-fky" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pke-GA-4oE" secondAttribute="leading" id="RKx-Up-13X"/>
                             <constraint firstItem="At9-hB-fky" firstAttribute="top" secondItem="Pke-GA-4oE" secondAttribute="top" constant="20" id="qhC-6a-8X2"/>
+                            <constraint firstItem="Pke-GA-4oE" firstAttribute="trailing" secondItem="At9-hB-fky" secondAttribute="trailing" constant="314" id="rur-t9-h6P"/>
                             <constraint firstItem="Pke-GA-4oE" firstAttribute="trailing" secondItem="WYZ-CK-ufz" secondAttribute="trailing" id="uUb-J9-cjQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pke-GA-4oE"/>

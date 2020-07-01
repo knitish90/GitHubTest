@@ -32,14 +32,14 @@ class LoginViewCoordinator : Coordinator {
 }
 
 extension LoginViewCoordinator : LoginViewCoordinatorDelegate {
+    func navigateToWebViewPage() {
+        
+    }
+    
     func navigateToUserList() {
         let coordinator = UserListCoordinator(navigationController: navigationController)
         childCoordinators.append(coordinator)
         coordinator.childCoordinators   =   childCoordinators
         coordinator.start()
-    }
-    
-    func navigateToWebViewPage() {
-        
     }
 }
