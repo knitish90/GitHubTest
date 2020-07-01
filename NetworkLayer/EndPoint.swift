@@ -13,7 +13,7 @@ struct EndPoint {
     static let baseURL = "https://api.github.com/"
     
     struct Users {
-        static let userList      =   EndPoint.baseURL + "users?since={page}&per_page=10"
+        static let userList      =   EndPoint.baseURL + "users?since={page}&per_page=15"
         static let searchUsers   =   EndPoint.baseURL + "search/users?q={query}"
         static let searchRepositories =   EndPoint.baseURL + "search/repositories?q={query}"
     }

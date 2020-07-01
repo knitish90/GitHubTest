@@ -44,11 +44,9 @@ extension WebViewController : WKNavigationDelegate {
         viewModel.getAuthCode(request: navigationAction.request)
         viewModel.reuestForGithubAccessToken { (token) in
             if token.isEmpty == false {
-                self.viewModel.getGitHubUserProfile(accessToken: token) {
+                self.viewModel.getGitHubUserProfile(token: token) {
                     self.viewModel.saveLoggedInUserDetails()
-                    self.dismiss(animated: true) {
-                        
-                    }
+                    self.dismiss(animated: true) 
                 }
             }
         }

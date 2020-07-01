@@ -11,8 +11,8 @@
 		010AFF9524A59FF1007F40C0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AFF9424A59FF1007F40C0 /* WebViewController.swift */; };
 		010AFF9824A5A557007F40C0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010AFF9724A5A557007F40C0 /* WebKit.framework */; };
 		010AFF9A24A5AE35007F40C0 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AFF9924A5AE35007F40C0 /* LoginService.swift */; };
-		010AFF9D24A5AEB2007F40C0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AFF9C24A5AEB2007F40C0 /* LoginViewModel.swift */; };
 		010AFFA024A5B25C007F40C0 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010AFF9F24A5B25C007F40C0 /* Login.swift */; };
+		011C55FF24ACF5C8009D54C4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011C55FE24ACF5C8009D54C4 /* LoginViewModel.swift */; };
 		01371D4D24A49C040004BA97 /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01371D4C24A49C040004BA97 /* UserDetailsViewController.swift */; };
 		01371D4F24A4BA140004BA97 /* RepositoriesListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01371D4E24A4BA130004BA97 /* RepositoriesListViewCell.swift */; };
 		01371D5124A4C00D0004BA97 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01371D5024A4C00D0004BA97 /* UserDetailViewModel.swift */; };
@@ -77,8 +77,8 @@
 		010AFF9424A59FF1007F40C0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		010AFF9724A5A557007F40C0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		010AFF9924A5AE35007F40C0 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		010AFF9C24A5AEB2007F40C0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		010AFF9F24A5B25C007F40C0 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		011C55FE24ACF5C8009D54C4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		01371D4C24A49C040004BA97 /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		01371D4E24A4BA130004BA97 /* RepositoriesListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewCell.swift; sourceTree = "<group>"; };
 		01371D5024A4C00D0004BA97 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
@@ -156,9 +156,9 @@
 		010AFF8E24A52A8D007F40C0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				011C55FD24ACF5B1009D54C4 /* ViewModel */,
 				01699CF524A5E3D200B9E063 /* Coordinator */,
 				010AFF9E24A5B24A007F40C0 /* Model */,
-				010AFF9B24A5AE89007F40C0 /* ViewModel */,
 				010AFF9124A52CA8007F40C0 /* View */,
 			);
 			path = Login;
@@ -181,21 +181,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		010AFF9B24A5AE89007F40C0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				010AFF9C24A5AEB2007F40C0 /* LoginViewModel.swift */,
-			);
-			name = ViewModel;
-			path = ../../../../../../../../../nitishkumar/Desktop/Modules/ViewModel;
-			sourceTree = "<group>";
-		};
 		010AFF9E24A5B24A007F40C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				010AFF9F24A5B25C007F40C0 /* Login.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		011C55FD24ACF5B1009D54C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				011C55FE24ACF5C8009D54C4 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		01699CF524A5E3D200B9E063 /* Coordinator */ = {
@@ -385,11 +384,11 @@
 		0177DC9224A4743200E72B63 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0177DC9624A4743200E72B63 /* Services */,
 				0177DC9E24A4748300E72B63 /* Errors.swift */,
 				0177DC9324A4743200E72B63 /* URLCoder.swift */,
 				0177DC9424A4743200E72B63 /* HTTPClient.swift */,
 				0177DC9524A4743200E72B63 /* Response.swift */,
-				0177DC9624A4743200E72B63 /* Services */,
 				0177DC9824A4743200E72B63 /* EndPoint.swift */,
 			);
 			path = NetworkLayer;
@@ -544,7 +543,6 @@
 				01371D4D24A49C040004BA97 /* UserDetailsViewController.swift in Sources */,
 				0177DC9924A4743200E72B63 /* URLCoder.swift in Sources */,
 				0177DCB724A4887400E72B63 /* UsersCellViewModel.swift in Sources */,
-				010AFF9D24A5AEB2007F40C0 /* LoginViewModel.swift in Sources */,
 				01371D5124A4C00D0004BA97 /* UserDetailViewModel.swift in Sources */,
 				01699CF724A5E3E100B9E063 /* LoginViewCoordinator.swift in Sources */,
 				0177DC8E24A473F400E72B63 /* ImageDownloader.swift in Sources */,
@@ -564,6 +562,7 @@
 				010AFFA024A5B25C007F40C0 /* Login.swift in Sources */,
 				0177DC5924A4720E00E72B63 /* GitHub.xcdatamodeld in Sources */,
 				0177DCAD24A47EAD00E72B63 /* UserListTableViewCell.swift in Sources */,
+				011C55FF24ACF5C8009D54C4 /* LoginViewModel.swift in Sources */,
 				0180F79D24A4FE7000E58E52 /* Repository.swift in Sources */,
 				0177DC5124A4720E00E72B63 /* SceneDelegate.swift in Sources */,
 				0180F79B24A4F1AA00E58E52 /* SearchedItems.swift in Sources */,
